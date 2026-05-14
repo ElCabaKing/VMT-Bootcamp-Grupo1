@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="guardar()">
+    <ol>
+        <li>
+            <mat-form-field>
+            <mat-label>Nombre: </mat-label>
+            <input matInput formControlName="name" placeholder="Nombre"/>
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field>
+            <mat-label>Country: </mat-label>
+            <input matInput formControlName="country" placeholder="Ciudad" />
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field>
+            <mat-label>Phone Number: </mat-label>
+            <input matInput formControlName="phoneNumber" placeholder="Phone Number" />
+            </mat-form-field>
+        </li>
+        <li>
+            <button matButton="elevated" >
+                @if(isEdit())
+                {Editar}
+                @else
+                {Crear}
+            </button>
+        </li>
+        </ol>
+</form>
