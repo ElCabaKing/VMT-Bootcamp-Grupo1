@@ -12,8 +12,8 @@
             <p><strong>Phone Number:</strong> {{ author.phoneNumber }}</p>
         </div>
         <div class="button-container">
-            <button class="base-button edit-button">Edit</button>
-            <button class="base-button delete-button">Delete</button>
+            <button  class="base-button edit-button">Edit</button>
+            <button (click)="confirmDelete()" class="base-button delete-button">Delete</button>
         </div>
     </div>
     }
