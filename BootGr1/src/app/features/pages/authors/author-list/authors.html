@@ -1,7 +1,7 @@
 <div class="authors-page">
     <div>
     <h1>Authors</h1>
-    <button class="base-button add-button">Add Author</button>
+    <button class="base-button add-button" (click)="abrirFormulario()">Add Author</button>
     </div>
     @for (author of authorList(); track author.id){
     <div class="authors-container">
