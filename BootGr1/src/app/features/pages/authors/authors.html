@@ -1,0 +1,20 @@
+<div class="authors-page">
+    <div>
+    <h1>Authors</h1>
+    <button class="base-button add-button">Add Author</button>
+    </div>
+    @for (author of authorList(); track author.id){
+    <div class="authors-container">
+        <div class="author-card">
+            <h2>Nombre hooder</h2>
+            <p><strong>Country:</strong> {{ author.country }}</p>
+            <p><strong>Created At:</strong> {{ author.createdAt }}</p>
+            <p><strong>Phone Number:</strong> {{ author.phoneNumber }}</p>
+        </div>
+        <div class="button-container">
+            <button class="base-button edit-button">Edit</button>
+            <button class="base-button delete-button">Delete</button>
+        </div>
+    </div>
+    }
+</div>
