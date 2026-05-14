@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { AuthorsService } from '../../services/authors-service';
-import { IAuthor } from '../../interfaces/IAuthor';
+import { AuthorsService } from '../../../services/authors-service';
+import { IAuthor } from '../../../interfaces/IAuthor';
 
 @Component({
   selector: 'app-authors',
