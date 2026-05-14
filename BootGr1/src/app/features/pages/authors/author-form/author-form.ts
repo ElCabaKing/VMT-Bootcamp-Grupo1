@@ -3,11 +3,17 @@ import { AuthorsService } from '../../../services/authors-service';
 import { IAuthor } from '../../../interfaces/IAuthor';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-author-form',
-  imports: [],
+  imports: [ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule],
   templateUrl: './author-form.html',
   styleUrl: './author-form.scss',
 })
