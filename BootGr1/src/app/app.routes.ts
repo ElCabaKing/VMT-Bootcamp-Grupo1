@@ -4,7 +4,7 @@ export const routes: Routes = [
     { path: '', redirectTo: 'books', pathMatch: 'full' },
     {
         path: 'authors',
-        loadComponent: () => import('./features/pages/authors/authors').then(m => m.Authors)
+        loadComponent: () => import('./features/pages/authors/author-list/authors').then(m => m.Authors)
     }
     ,
     { path: '**', redirectTo: 'books' }
