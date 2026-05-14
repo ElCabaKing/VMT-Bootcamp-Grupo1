@@ -1,13 +1,13 @@
 import { inject ,Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { enviroment } from '../env/enviroments';
 import { Observable } from 'rxjs';
-import { IBook } from '../interfaces/IBook';
+import { IBook } from '../features/interfaces/IBook';
 @Injectable({
   providedIn: 'root',
 })
 export class BooksService {
-  private apiUrl = environment.apiUrl;
+  private apiUrl = enviroment.apiUrl;
   private http= inject(HttpClient);
 
   getAllBooks(): Observable<IBook[]>{
