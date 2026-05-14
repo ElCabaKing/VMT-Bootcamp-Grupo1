@@ -1,0 +1,79 @@
+:host {
+    display: block;
+}
+
+.authors-page {
+    min-height: 100%;
+    padding: 24px;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+.authors-page h1 {
+    margin: 0 0 16px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.authors-container {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 20px 22px;
+    border-radius: 16px;
+    border: 1px solid #dbe3ec;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    max-width: 420px;
+}
+
+.author-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+    color: #111827;
+}
+
+.author-card p {
+    margin: 0 0 8px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.button-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.base-button {
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.base-button:hover {
+    transform: translateY(-1px);
+}
+
+.edit-button {
+    background-color: #e8f2ff;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+}
+
+.edit-button:hover {
+    box-shadow: 0 8px 16px rgba(29, 78, 216, 0.12);
+}
+
+.delete-button {
+    background-color: #fff1f2;
+    color: #be123c;
+    border-color: #fecdd3;
+}
+
+.delete-button:hover {
+    box-shadow: 0 8px 16px rgba(190, 18, 60, 0.12);
+}
