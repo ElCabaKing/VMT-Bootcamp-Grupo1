@@ -6,7 +6,7 @@
     @for (author of authorList(); track author.id){
     <div class="authors-container">
         <div class="author-card">
-            <h2>Nombre hooder</h2>
+            <h2>{{ author.name }}</h2>
             <p><strong>Country:</strong> {{ author.country }}</p>
             <p><strong>Created At:</strong> {{ author.createdAt }}</p>
             <p><strong>Phone Number:</strong> {{ author.phoneNumber }}</p>
