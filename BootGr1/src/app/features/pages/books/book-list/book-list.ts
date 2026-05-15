@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { IBook } from '../../../interfaces/IBook';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { BooksService } from '../../../services/books-service/books-service';
 import { Router } from '@angular/router';
 import { BookForm } from '../book-form/book-form';
@@ -10,6 +10,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { ConfirmElimination } from '../confirm-elimination/confirm-elimination';
 
 
 @Component({
@@ -66,4 +67,22 @@ export class BookList {
       data: book
     })
   }
+
+  dialog = inject(MatDialog);
+
+  confirmarEliminacion() {
+    const dialogRef = this.dialog.open(ConfirmElimination, {
+      data: null
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result?.delete) {
+        this.bookService.DeleteBook('id');
+        // Aquí puedes actualizar la lista de autores después de eliminar uno
+        this.bookService.getAllBooks().subscribe((books) => {
+          this.books.set(books);
+        });
+      }
+    });
   }
+}
