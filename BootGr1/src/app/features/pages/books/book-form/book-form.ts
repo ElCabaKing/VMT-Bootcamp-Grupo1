@@ -1,13 +1,15 @@
 import { Component, inject, signal } from '@angular/core';
 import { IBook } from '../../../interfaces/IBook';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { BooksService } from '../../../services/books-service/books-service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-book-form',
-  imports: [],
+  imports: [MatFormField, MatInputModule, MatLabel, MatDialogModule, MatError],
   templateUrl: './book-form.html',
   styleUrl: './book-form.scss',
 })
